@@ -1,6 +1,6 @@
 describe('Party Horn Tests', () => {
   beforeEach(() => {
-    cy.visit('http://127.0.0.1:5500/Part2-Cypress/index.html');
+    cy.visit('http://127.0.0.1:5500/index.html');
   });
 
   it('First Test', () => {
@@ -34,10 +34,10 @@ describe('Party Horn Tests', () => {
     cy.get('#radio-party-horn').click();
     cy.get('#radio-party-horn').trigger("input");
     cy.get('#sound-image').then(function($el){
-      expect($el).to.have.prop('src', "http://127.0.0.1:5500/Part2-Cypress/assets/media/images/party-horn.svg");
+      expect($el).to.have.prop('src', "http://127.0.0.1:5500/assets/media/images/party-horn.svg");
     });
     cy.get('#horn-sound').then(function($el){
-      expect($el).to.have.prop('src', "http://127.0.0.1:5500/Part2-Cypress/assets/media/audio/party-horn.mp3");
+      expect($el).to.have.prop('src', "http://127.0.0.1:5500/assets/media/audio/party-horn.mp3");
     });
   });
 
@@ -45,25 +45,25 @@ describe('Party Horn Tests', () => {
     cy.get('#volume-slider').invoke('val', 0);
     cy.get('#volume-slider').trigger("input");
     cy.get('#volume-image').then(function($el){
-      expect($el).to.have.prop('src', "http://127.0.0.1:5500/Part2-Cypress/assets/media/icons/volume-level-0.svg");
+      expect($el).to.have.prop('src', "http://127.0.0.1:5500/assets/media/icons/volume-level-0.svg");
     });
 
     cy.get('#volume-slider').invoke('val', 10);
     cy.get('#volume-slider').trigger("input");
     cy.get('#volume-image').then(function($el){
-      expect($el).to.have.prop('src', "http://127.0.0.1:5500/Part2-Cypress/assets/media/icons/volume-level-1.svg");
+      expect($el).to.have.prop('src', "http://127.0.0.1:5500/assets/media/icons/volume-level-1.svg");
     });
 
     cy.get('#volume-slider').invoke('val', 50);
     cy.get('#volume-slider').trigger("input");
     cy.get('#volume-image').then(function($el){
-      expect($el).to.have.prop('src', "http://127.0.0.1:5500/Part2-Cypress/assets/media/icons/volume-level-2.svg");
+      expect($el).to.have.prop('src', "http://127.0.0.1:5500/assets/media/icons/volume-level-2.svg");
     });
 
     cy.get('#volume-slider').invoke('val', 100);
     cy.get('#volume-slider').trigger("input");
     cy.get('#volume-image').then(function($el){
-      expect($el).to.have.prop('src', "http://127.0.0.1:5500/Part2-Cypress/assets/media/icons/volume-level-3.svg");
+      expect($el).to.have.prop('src', "http://127.0.0.1:5500/assets/media/icons/volume-level-3.svg");
     });
   });
 
